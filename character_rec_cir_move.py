@@ -13,6 +13,12 @@ def rec_move():
         grass.draw_now(400,30)
         character.draw_now(x,90)
         delay(0.01)
+
+    for x in range(750, 50 -1, -10):
+        clear_canvas_now()
+        grass.draw_now(400,30)
+        character.draw_now(x,550)
+        delay(0.01)
     pass
 
 def cir_move():

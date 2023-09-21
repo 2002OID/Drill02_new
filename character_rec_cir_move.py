@@ -36,7 +36,7 @@ def cir_move():
 
 while True:
     rec_move()
-    #cir_move()
+    cir_move()
     break
     
 close_canvas()

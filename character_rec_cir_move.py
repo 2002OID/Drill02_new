@@ -8,6 +8,11 @@ character = load_image('character.png')
 
 def rec_move():
     print('rec')
+    for x in range(50, 750 + 1, 10):
+        clear_canvas_now()
+        grass.draw_now(400,30)
+        character.draw_now(x,90)
+        delay(0.01)
     pass
 
 def cir_move():

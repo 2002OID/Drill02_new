@@ -6,19 +6,20 @@ open_canvas()
 grass = load_image('grass.png')
 character = load_image('character.png')
 
+def render_frame(x, y):
+    clear_canvas_now()
+    grass.draw_now(400,30)
+    character.draw_now(x,y)
+    delay(0.01)
+
 def rec_move():
     print('rec')
     for x in range(50, 750 + 1, 10):
-        clear_canvas_now()
-        grass.draw_now(400,30)
-        character.draw_now(x,90)
-        delay(0.01)
-
+        render_frame(x, 90)
+        
+    
     for x in range(750, 50 -1, -10):
-        clear_canvas_now()
-        grass.draw_now(400,30)
-        character.draw_now(x,550)
-        delay(0.01)
+        render_frame(x, 550)
     pass
 
 def cir_move():
@@ -30,10 +31,7 @@ def cir_move():
     for deg in range(270, -90, -5):
         x = r * math.cos(math.radians(deg))
         y = r * math.sin(math.radians(deg))
-        clear_canvas_now()
-        grass.draw_now(400,30)
-        character.draw_now(x + cx,y + cy)
-        delay(0.01)
+        render_frame(x + cx, y + cy)
         
 
 while True:

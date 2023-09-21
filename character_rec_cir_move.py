@@ -6,11 +6,11 @@ grass = load_image('grass.png')
 character = load_image('character.png')
 
 def rec_move():
-    print('cir')
+    print('rec')
     pass
 
 def cir_move():
-    print('rec')
+    print('cir')
     pass
 
 while True:
